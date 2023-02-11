@@ -1,0 +1,64 @@
+:root {
+  --nav-bar-height: 80px;
+  --background-color: #1c1c25;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../public/fonts/Poppins/Poppins-Regular.ttf');
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../public/fonts/Poppins/Poppins-Bold.ttf');
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+ul, ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 96px;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 48px;
+}
+
+.nav-bar {
+  height: var(--nav-bar-height);
+  background-color: var(--background-color);
+  z-index: 9999;
+}
+
+@media screen and (max-width: 769px) {
+  h1 {
+    font-size: 60px;
+  }
+}

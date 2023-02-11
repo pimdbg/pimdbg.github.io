@@ -1,0 +1,138 @@
+:root {
+  /* --background-color: #1c1c25; */
+  --color-custom-blue: #1d89ff;
+  --text-gradient: linear-gradient(to right, var(--color-custom-blue), #c533c8);
+  --gap: 30px;
+  --padding: 30px;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../public/fonts/Poppins/Poppins-Regular.ttf');
+}
+
+#container {
+  /* background-color: var(--background-color); */
+}
+.layout {
+  width: 75%;
+  margin-inline: auto;
+}
+
+.highlighted {
+  background: linear-gradient(to right, var(--color-custom-blue), #33c87c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.welcome {
+  min-height: calc(100vh - var(--nav-bar-height));
+}
+
+.welcome__content {
+  font-family: Poppins;
+  margin-top: 100px;
+}
+
+.welcome__title {
+  font-weight: bold;
+  color: var(--color-custom-blue);
+  margin: 0;
+  width: fit-content;
+  visibility: hidden;
+  animation: slideIn 1000ms 500ms forwards;
+  background: linear-gradient(to right, var(--color-custom-blue), #33c87c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.welcome__subtitle {
+  font-weight: bold;
+  margin: 0;
+  visibility: hidden;
+  animation: slideIn 1000ms 1100ms forwards;
+}
+
+.welcome__description {
+  margin: 0;
+  padding: var(--padding) 0;
+  visibility: hidden;
+  animation: slideIn 1000ms 2100ms forwards;
+}
+
+.nav-bar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  height: var(--nav-bar-height);
+  background-color: var(--background-color);
+  z-index: 9999;
+  animation: slideNavbar 500ms 2000ms forwards;
+  translate: 0 -100%; 
+}
+
+.nav-menu {
+  display: flex;
+  column-gap: var(--gap);
+}
+
+.socials {
+  opacity: 0;
+  animation: fadeIn 500ms 2000ms forwards;
+}
+.socials-list {
+  display: flex;
+  gap: var(--gap);
+}
+.socials-item {
+  transition: scale 150ms;
+}
+.socials-item:hover {
+  scale: 110%;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+@keyframes slideIn {
+  from {
+    translate: -200%;
+    visibility: hidden;
+    filter: blur(4px);
+  }
+  to {
+    translate: 0%;
+    visibility: visible;    
+    filter: blur(0);
+  }
+}
+@keyframes blurIn {
+  from {
+    filter: blur(4px);
+  }
+  to {   
+    filter: blur(0);
+  }
+}
+@keyframes slideNavbar {
+  from {
+    translate: 0 -100%;
+  }
+  to {
+    translate: 0 0%;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    blur: 5px;
+  }
+  to {
+    opacity: 1;
+    blur: 0;
+  }
+}
