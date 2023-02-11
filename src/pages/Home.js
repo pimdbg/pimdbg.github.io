@@ -5,7 +5,7 @@ import { SiJavascript } from 'react-icons/si';
 export default function Home() {
     return (
         <div id="container">
-            <NavBar />
+            {/* <NavBar /> */}
             <header className="welcome layout">
                 <div className="welcome__content">
                     <h1 className="welcome__title highlight">Hello there</h1>
