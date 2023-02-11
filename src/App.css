@@ -91,6 +91,10 @@
 .socials-item:hover {
   scale: 110%;
 }
+.socials-item__icon {
+  width: 40px;
+  height: 40px;
+}
 
 .skills {
   display: grid;

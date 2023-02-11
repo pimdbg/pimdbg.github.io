@@ -1,7 +1,10 @@
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { BsLinkedin } from 'react-icons/bs';
+
 function Socials() {
     const links = [
-        { icon: '/icons/linkedin.svg', href: 'https://www.linkedin.com/in/pim-dautzenberg-85582a237/'},
-        { icon: '/icons/github.svg', href: 'https://github.com/pimdbg'}
+        { icon: <BsLinkedin className="socials-item__icon" />, href: 'https://www.linkedin.com/in/pim-dautzenberg-85582a237/'},
+        { icon: <FaGithub className="socials-item__icon" />, href: 'https://github.com/pimdbg'}
     ];
 
     return (
@@ -11,7 +14,7 @@ function Socials() {
                     links.map((link, index) => (
                         <li key={index} className="socials-item">
                             <a href={link.href} target="_blank">
-                                <img src={link.icon} alt="" style={{ width: 40, height: 40 }} />
+                                {link.icon}
                             </a>
                         </li>
                     ))
