@@ -26,7 +26,10 @@
 }
 
 .welcome {
-  min-height: calc(100vh - var(--nav-bar-height));
+  padding-top: var(--nav-bar-height);
+  min-height: calc(100vh);
+  /* min-height: calc(100vh - var(--nav-bar-height)); */
+
 }
 
 .welcome__content {
@@ -100,6 +103,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+}
+@media screen and (max-width: 769px) {
+  .welcome {
+    padding-top: 0;
+  }
 }
 
 @keyframes slideIn {

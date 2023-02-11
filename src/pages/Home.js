@@ -2,10 +2,9 @@ import NavBar from '../components/NavBar';
 import Socials from '../components/Socials';
 
 export default function Home() {
-    console.log(true);
     return (
         <div id="container">
-            <NavBar />
+            {/* <NavBar /> */}
             <header className="welcome layout">
                 <div className="welcome__content">
                     <h1 className="welcome__title highlighted">Hello there</h1>
@@ -18,7 +17,7 @@ export default function Home() {
                     <Socials />
                 </div>
             </header>
-            <main className="layout">
+            {/* <main className="layout">
                 <section className="intro" style={{textAlign: "center"}}>
                     <h1 className="intro__title">My name is Pim</h1>
                     <p>
@@ -42,7 +41,7 @@ export default function Home() {
                         </svg>
                     </section>
                 </section>
-            </main>
+            </main> */}
         </div>
     );
 }
