@@ -1,5 +1,4 @@
 function NavBar() {
-    return <div className="nav-bar" />;
     return (
         <nav className="nav-bar">
             <ul className="nav-menu layout">
