@@ -28,27 +28,18 @@ export default function Home() {
                 </section>
                 
 
-                <section className="skills">    
+                <section className="hexagon-grid">    
                 
-                <Hexagon size={"25vw"}>
-                    <SiJavascript size={100}/>
-                </Hexagon> 
-
-                <Hexagon size={"25vw"}>
-                    <SiPhp size={100}/>
-                </Hexagon> 
-
-                <Hexagon size={"25vw"}>
-                    <SiLaravel size={100}/>
-                </Hexagon>
-
-                <Hexagon size={"25vw"}>
-                    <SiWordpress size={100}/>
-                </Hexagon>
-
-                <Hexagon size={"25vw"}>
-                    <SiElectron size={100}/>
-                </Hexagon>
+                    <div className="hexagon-grid__row">
+                        <Hexagon icon={<SiJavascript size="150px"/>} className={"hexagon-grid__item"} />
+                        <Hexagon icon={<SiPhp size="150px"/>} className={"hexagon-grid__item"} />
+                        <Hexagon icon={<SiLaravel size="150px"/>} className={"hexagon-grid__item"} />
+                    </div>
+                    <div className="hexagon-grid__row hexagon-grid__row-even">
+                        <Hexagon icon={<SiWordpress size="150px"/>} className={"hexagon-grid__item"} />
+                        <Hexagon icon={<SiElectron size="150px"/>} className={"hexagon-grid__item"} />
+                    </div>
+                
                 </section>
             </main>
         </div>
