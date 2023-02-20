@@ -1,5 +1,6 @@
 import NavBar from '../components/NavBar';
 import Socials from '../components/Socials';
+import Hexagon from '../components/Hexagon';
 import { SiJavascript, SiPhp, SiLaravel, SiWordpress, SiElectron } from 'react-icons/si';
 
 export default function Home() {
@@ -12,19 +13,17 @@ export default function Home() {
                     <h3 className="welcome__subtitle">Welcome</h3>
                     <p className="welcome__description">
                         My name is Pim Dautzenberg, <br />
-                        I am a Full Stack Web Developer in Limburg, The Netherlands.<br /><br />
-                        Visit my Github for some projects
+                        I am a Full Stack Web Developer in Limburg, The Netherlands.
                     </p>
                     <Socials />
                 </div>
             </header>
-            <main className="layout">
+            <main>
 
-                <section className="intro" style={{textAlign: "center"}}>
+                <section className="intro layout" style={{textAlign: "center"}}>
                     <h2 className="intro__title">Frontend, Backend, SEO</h2>
                     <p>
                         Web Developer in Limburg, The Netherlands.
-                        <p>ewfrg</p>
                     </p>
                 </section>
                 
@@ -52,24 +51,6 @@ export default function Home() {
                 </Hexagon>
                 </section>
             </main>
-        </div>
-    );
-}
-
-function Hexagon(props) {
-    const { size = 100 } = props;
-
-    return (
-        <div className="hexagon" style={{ width: size, height: size }}>
-            <div className="hexagon__image-wrapper">
-                <img src="/icons/hexagon.svg" alt="" className="hexagon__image" />
-            </div>
-
-            <div className="hexagon__content-wrapper">
-                <div className="hexagon__content">
-                    {props.children}
-                </div>    
-            </div>
         </div>
     );
 }
