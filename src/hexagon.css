@@ -1,0 +1,89 @@
+:root {
+    --hexagon-size: 30vw;
+    --hexagon-size-ngt: calc(var(--hexagon-size) - var(--hexagon-size) - var(--hexagon-size));
+    --hexagon-color: white;
+    --hexagon-inner-color: var(--background-color);
+}
+
+.hexagon {
+    height: var(--hexagon-size);
+    width: var(--hexagon-size);
+    position: relative;
+    top: 0;
+    z-index: 1;
+}
+.hexagon:not(.hexagon-inner) {
+    float: left;
+    margin-left: calc(var(--hexagon-size) * 0.029);
+    margin-bottom: calc(var(--hexagon-size-ngt) * 0.1);
+}
+  
+.hexagon__middle {
+    width: var(--hexagon-size);
+    height: calc(var(--hexagon-size) * 0.576 );
+    background-color: var(--hexagon-color);
+    position: relative;
+    top: 0;
+    display: block;
+}
+
+.hexagon__top, .hexagon__bottom {
+    border-left: transparent calc(var(--hexagon-size) / 2 ) solid;
+    border-right: transparent calc(var(--hexagon-size) / 2 ) solid;
+}
+
+.hexagon__top {
+    width: 0;
+    border-bottom: calc(var(--hexagon-size) * 0.288) solid var(--hexagon-color);
+}
+
+.hexagon__bottom {
+    width: 0;
+    border-top: calc(var(--hexagon-size) * 0.288) solid var(--hexagon-color);
+}
+
+/* Hexagon inner */
+.hexagon.hexagon-inner {
+    scale: 0.9 0.9;
+    position: absolute;
+    top: 0;
+}
+
+.hexagon-inner__middle {
+    background-color: var(--hexagon-inner-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hexagon-inner__top {
+    width: 0;
+    border-bottom: calc(var(--hexagon-size) * 0.288) solid var(--hexagon-inner-color);
+    position: relative;
+    top: 1px;
+}
+
+.hexagon-inner__bottom {
+    width: 0;
+    border-top: calc(var(--hexagon-size) * 0.288) solid var(--hexagon-inner-color);
+    position: relative;
+    bottom: 1px;
+}
+
+/* Hexagon grid */
+.hexagon-grid {
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding : var(--padding) 0;
+  position: relative;
+  left: calc(var(--hexagon-size) * 0.130);
+}
+
+.hexagon-grid__row {
+    clear: left;
+    display: flex;
+}
+
+.hexagon-grid__row-even {
+    margin-left: calc(var(--hexagon-size) * 0.51);
+}

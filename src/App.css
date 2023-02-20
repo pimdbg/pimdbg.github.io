@@ -97,30 +97,11 @@
   height: 40px;
 }
 
-.hexagon {
-  position: relative;
-  top: 0;
-  display: inline-block;
-  min-width: min-content;
-}
-.hexagon__image {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-.hexagon__content-wrapper {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;;
+@media screen and (max-width: 769px) {
+  .hexagon-grid {
+    margin-top: 100px;
+    scale: 1.5 1.5;
+  }
 }
 
 @keyframes slideIn {
