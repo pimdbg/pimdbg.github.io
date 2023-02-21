@@ -43,6 +43,12 @@
     border-top: calc(var(--hexagon-size) * 0.288) solid var(--hexagon-color);
 }
 
+.hexagon__icon {
+    width: 50%;
+    max-width: 150px;
+    aspect-ratio: 1 / 1;
+}
+
 /* Hexagon inner */
 .hexagon.hexagon-inner {
     scale: 0.9 0.9;
