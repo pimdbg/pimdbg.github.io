@@ -1,6 +1,7 @@
 import NavBar from '../components/NavBar';
 import Socials from '../components/Socials';
 import Hexagon from '../components/Hexagon';
+import Observer from '../components/Observer';
 import { SiJavascript, SiPhp, SiLaravel, SiWordpress, SiElectron } from 'react-icons/si';
 
 export default function Home() {
@@ -20,26 +21,32 @@ export default function Home() {
             </header>
             <main>
 
-                <section className="intro layout" style={{textAlign: "center"}}>
-                    <h2 className="intro__title">Frontend, Backend, SEO</h2>
-                    <p>
-                        Web Developer in Limburg, The Netherlands.
-                    </p>
-                </section>
+                <Observer>
+                    <section className="intro layout" style={{textAlign: "center"}}>
+                        <h2 className="intro__title">Frontend, Backend, SEO</h2>
+                        <p>
+                            Web Developer in Limburg, The Netherlands.
+                        </p>
+                    </section>
+                </Observer>
                 
 
                 <section className="hexagon-grid">    
                 
                     <div className="hexagon-grid__row">
-                        <Hexagon icon={<SiJavascript size="150px"/>} className={"hexagon-grid__item"} />
-                        <Hexagon icon={<SiPhp size="150px"/>} className={"hexagon-grid__item"} />
-                        <Hexagon icon={<SiLaravel size="150px"/>} className={"hexagon-grid__item"} />
+                        <Hexagon icon={<SiJavascript className="hexagon__icon" size="150px"/>} className={"hexagon-grid__item"} />
+                        <Hexagon icon={<SiPhp className="hexagon__icon" size="150px"/>} className={"hexagon-grid__item"} />
+                        <Hexagon icon={<SiLaravel className="hexagon__icon" size="150px"/>} className={"hexagon-grid__item"} />
                     </div>
                     <div className="hexagon-grid__row hexagon-grid__row-even">
-                        <Hexagon icon={<SiWordpress size="150px"/>} className={"hexagon-grid__item"} />
-                        <Hexagon icon={<SiElectron size="150px"/>} className={"hexagon-grid__item"} />
+                        <Hexagon icon={<SiWordpress className="hexagon__icon" size="150px"/>} className={"hexagon-grid__item"} />
+                        <Hexagon icon={<SiElectron className="hexagon__icon" size="150px"/>} className={"hexagon-grid__item"} />
                     </div>
                 
+                </section>
+                
+                <section className="layout">
+                    <h2>Placeholder content</h2>
                 </section>
             </main>
         </div>

@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import '../hexagon.css';
+import Observer from './Observer';
 
 function Hexagon(props) {
     const { size = 100, icon , className } = props;
@@ -10,6 +11,7 @@ function Hexagon(props) {
             <div className="hexagon__top" />
             <div className="hexagon__middle" />
             <div className="hexagon__bottom" />
+        <Observer>
 
             {/* Inner content */}
             <div className="hexagon hexagon-inner">
@@ -22,6 +24,7 @@ function Hexagon(props) {
                 <div className="hexagon__bottom hexagon-inner__bottom" />
             </div>
         </div>
+        </Observer>
     );
 }
 
