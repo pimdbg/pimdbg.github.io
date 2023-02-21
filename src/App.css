@@ -4,6 +4,8 @@
   --text-gradient: linear-gradient(to right, var(--color-custom-blue), #c533c8);
   --gap: 30px;
   --padding: 30px;
+  --layout-width: 75%;
+  --layout-max-width: 1200px;
 }
 
 @font-face {
@@ -11,11 +13,14 @@
   src: url('../public/fonts/Poppins/Poppins-Regular.ttf');
 }
 
+
 #container {
+  overflow: hidden;
   /* background-color: var(--background-color); */
 }
 .layout {
-  width: 75%;
+  width: var(--layout-width);
+  max-width: var(--layout-max-width);
   margin-inline: auto;
 }
 
@@ -97,6 +102,11 @@
   height: 40px;
 }
 
+.observer {
+  transition: all 3s 1s;
+}
+.observer--active {
+  animation: fadeIn 700ms 1000ms forwards;
 }
 
 @keyframes slideIn {
