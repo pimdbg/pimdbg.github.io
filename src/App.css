@@ -97,11 +97,6 @@
   height: 40px;
 }
 
-@media screen and (max-width: 769px) {
-  .hexagon-grid {
-    margin-top: 100px;
-    scale: 1.5 1.5;
-  }
 }
 
 @keyframes slideIn {
