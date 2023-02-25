@@ -15,7 +15,7 @@ function Observer(props) {
         const options = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.5
+            threshold: 0.8
         };
 
         const callback = (entries, observer) => {
@@ -32,15 +32,7 @@ function Observer(props) {
     }, [containerRef]);
 
     return (
-        <div className={"observer " + ((isIntersecting) && "observer--active " ) + className} 
-            style={{
-                ...style, 
-                ...{
-                    "visibility": (isIntersecting) 
-                        ? "visible" 
-                        : "hidden"}
-                }
-            } ref={containerRef}>
+        <div className={"observer " + ((isIntersecting) ? "observer--active " : "") + className} style={style} ref={containerRef}>
             {props.children}
         </div>
     );
