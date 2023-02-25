@@ -32,6 +32,7 @@ code {
 ul, ol {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 li a {
@@ -51,14 +52,22 @@ h3 {
   font-size: 48px;
 }
 
-.nav-bar {
-  height: var(--nav-bar-height);
-  background-color: var(--background-color);
-  z-index: 9999;
+h4 {
+  font-size: 43px;
 }
+
 
 @media screen and (max-width: 769px) {
   h1 {
-    font-size: 60px;
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 35px;
+  }
+  h4 {
+    font-size: 30px;
   }
 }
