@@ -1,5 +1,5 @@
 :root {
-    --hexagon-size: 30vw;
+    --hexagon-size: 250px;
     --hexagon-size-ngt: calc(var(--hexagon-size) - var(--hexagon-size) - var(--hexagon-size));
     --hexagon-color: white;
     --hexagon-inner-color: var(--background-color);
@@ -87,11 +87,9 @@
 
 /* Hexagon grid */
 .hexagon-grid {
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: var(--padding) 0 100px 0;
-  position: relative;
-  left: calc(var(--hexagon-size) * 0.130);
+    width: fit-content;
+    margin: 0 auto;
+    padding: var(--padding) 0 100px 0;
 }
 
 .hexagon-grid__row {
@@ -104,8 +102,11 @@
 }
 
 @media screen and (max-width: 769px) {
+    :root {
+        --hexagon-size: 30vw;
+    }
     .hexagon-grid {
       margin-top: 100px;
-      scale: 1.5 1.5;
+      scale: 1.2 1.2;
     }
   }
