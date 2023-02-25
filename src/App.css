@@ -74,6 +74,18 @@ html {
   animation: slideIn 1000ms 2100ms forwards;
 }
 
+.intro {
+  text-align: center;
+}
+
+.intro__text {
+  margin-inline: auto;
+}
+
+.projects__title {
+  text-align: center;
+}
+
 .nav-bar {
   position: sticky;
   top: 0;
