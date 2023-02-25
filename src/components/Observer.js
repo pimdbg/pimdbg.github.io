@@ -20,7 +20,6 @@ function Observer(props) {
 
         const callback = (entries, observer) => {
             entries.forEach((entry) => {
-                console.log(entry.isIntersecting);
                 if(entry.isIntersecting) {
                     setIsIntersecting(entry.isIntersecting);
                 }
