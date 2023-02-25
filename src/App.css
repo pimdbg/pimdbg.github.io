@@ -111,6 +111,11 @@ html {
 .observer--active {
   animation: slideDownUp 700ms 300ms forwards;
 }
+@media screen and (max-width: 769px) {
+  :root {
+    --layout-width: 85%;
+  }
+  }
 }
 
 @keyframes slideIn {
