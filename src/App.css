@@ -24,6 +24,7 @@ html {
   overflow: hidden;
   /* background-color: var(--background-color); */
 }
+
 .layout {
   width: var(--layout-width);
   max-width: var(--layout-max-width);
@@ -151,6 +152,31 @@ html {
 .socials-item__icon {
   width: 40px;
   height: 40px;
+}
+
+.btn {
+  background-color: transparent;
+  border: white 1px solid;
+  color: white;
+  padding: 20px 80px;
+  border-radius: 999vmax;
+  display: block;
+  cursor: pointer;
+  width: fit-content;
+  text-decoration: none;
+}
+.btn:hover {
+  scale: 1.05 1.05;
+  transition: scale 200ms;
+}
+
+.project__keywords-list {
+  display: flex;
+  gap: 20px;
+}
+
+.project__link {
+  margin: var(--padding) 0;
 }
 
 .observer {
