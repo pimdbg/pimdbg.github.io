@@ -32,9 +32,12 @@ html {
 
 .highlight {
   color: var(--color-custom-blue);
-  background: linear-gradient(to right, var(--color-custom-blue), #33c87c);
+  background: var(--text-gradient);
+  font-weight: bold;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  width: fit-content;
+}
 }
 
 .welcome {
