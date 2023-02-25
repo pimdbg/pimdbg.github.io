@@ -15,6 +15,10 @@
   src: url('../public/fonts/Poppins/Poppins-Regular.ttf');
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding: var(--nav-bar-height);
+}
 
 #container {
   overflow: hidden;
@@ -39,7 +43,7 @@
 
 .welcome__content {
   font-family: Poppins;
-  margin-top: 100px;
+  margin-top: 15vh;
 }
 
 .welcome__title {
@@ -49,9 +53,6 @@
   width: fit-content;
   visibility: hidden;
   animation: slideIn 1000ms 500ms forwards;
-  /* background: linear-gradient(to right, var(--color-custom-blue), #33c87c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
 }
 
 .welcome__subtitle {
