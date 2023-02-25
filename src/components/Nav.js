@@ -1,8 +1,8 @@
-function NavBar() {
 import { useState } from 'react';
 import { SlMenu, SlHome } from 'react-icons/sl';
-import Socials from '../components/Socials';
+import Socials from './Socials';
 
+function Nav() {
     const [links, setLinks] = useState([
         {name: "Home", href: "/", icon: <SlHome color={"white"} />},
         {name: "About", href: "/#about", icon: <SlHome color={"white"} />},
@@ -67,4 +67,4 @@ import Socials from '../components/Socials';
     }
 }
 
-export default NavBar;
+export default Nav;

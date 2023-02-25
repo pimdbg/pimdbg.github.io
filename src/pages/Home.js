@@ -1,4 +1,4 @@
-import NavBar from '../components/NavBar';
+import Nav from '../components/Nav';
 import Socials from '../components/Socials';
 import Hexagon from '../components/Hexagon';
 import Observer from '../components/Observer';
@@ -7,7 +7,7 @@ import { SiJavascript, SiPhp, SiLaravel, SiWordpress, SiElectron } from 'react-i
 export default function Home() {
     return (
         <div id="container">
-            <NavBar />
+            <Nav />
             <header className="welcome layout">
                 <div className="welcome__content">
                     <h1 className="welcome__title highlight">Hello there</h1>
