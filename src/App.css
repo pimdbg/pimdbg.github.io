@@ -77,21 +77,52 @@ html {
 .nav-bar {
   position: sticky;
   top: 0;
-  display: flex;
-  align-items: center;
   height: var(--nav-bar-height);
   background-color: var(--background-color);
   z-index: 9999;
   animation: slideNavbar 500ms 2000ms forwards;
   translate: 0 -100%; 
+  box-shadow: rgba(0, 0, 0, 0.427) 1px 0 10px;
 }
-
-.nav-menu {
+.nav, .nav-mobile-wrapper {
+  display: flex;
+  align-items: center;
+  height: var(--nav-bar-height);
+}
+.nav__menu {
   display: flex;
   column-gap: var(--gap);
 }
 
-.socials {
+.nav-mobile-wrapper {
+  display: none;
+}
+
+.nav-mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.94);
+}
+.nav-mobile__menu {
+  /* box-shadow: -1px 0 16px #00000078; */
+  height: 100%;
+  padding-top: calc(var(--nav-bar-height) * 2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  font-size: 25px;
+}
+.nav-mobile__btn {
+  background-color: transparent;
+  border: none;
+  z-index: 999;
+  padding: 0;
+}
+
+.welcome .socials {
   opacity: 0;
   animation: fadeIn 500ms 2000ms forwards;
 }
@@ -120,6 +151,13 @@ html {
   :root {
     --layout-width: 85%;
   }
+
+  .nav-mobile-wrapper {
+    display: flex;
+  }
+
+  .nav-wrapper {
+    display: none;
   }
 }
 
