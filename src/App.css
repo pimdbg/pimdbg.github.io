@@ -159,6 +159,15 @@ html {
 .observer--active {
   animation: slideDownUp 700ms 300ms forwards;
 }
+
+.footer {
+  background-color: black;
+  background-image: var(--text-gradient);
+}
+.footer__content {
+  padding: var(--padding) 0;
+}
+
 @media screen and (max-width: 769px) {
   :root {
     --layout-width: 85%;

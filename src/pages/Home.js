@@ -1,4 +1,5 @@
 import Nav from '../components/Nav';
+import Footer from '../components/Footer';
 import Socials from '../components/Socials';
 import Hexagon from '../components/Hexagon';
 import Observer from '../components/Observer';
@@ -56,6 +57,7 @@ export default function Home() {
                     <h2>Placeholder content</h2>
                 </section>
             </main>
+            <Footer />
         </div>
     );
 }
