@@ -38,6 +38,8 @@ html {
   -webkit-text-fill-color: transparent;
   width: fit-content;
 }
+.text-block {
+  max-width: 60ch;
 }
 
 .welcome {
