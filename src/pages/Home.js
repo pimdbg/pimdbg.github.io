@@ -3,7 +3,7 @@ import Footer from '../components/Footer';
 import Socials from '../components/Socials';
 import Hexagon from '../components/Hexagon';
 import Observer from '../components/Observer';
-import { SiJavascript, SiPhp, SiLaravel, SiWordpress, SiElectron } from 'react-icons/si';
+import { SiJavascript, SiPhp, SiLaravel, SiWordpress, SiElectron, SiCss3, SiReact, SiTailwindcss } from 'react-icons/si';
 
 export default function Home() {
     return (
