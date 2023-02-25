@@ -53,8 +53,25 @@ export default function Home() {
 
                 </section>
                 
-                <section className="layout">
-                    <h2>Placeholder content</h2>
+                <section id="projects" className="projects layout">
+                    <Observer>
+                        <h3 className="projects__title">My Projects</h3>
+                    </Observer>
+                    <Observer>
+                        <section className="project">
+                            <h4>Earthquake Map</h4>
+                            <p className="project__description text-block">
+                                Built as a school assignment 2021, this webapplication provides data about recorded earthquakes.
+                                This application collects all data via an API, then visualises it on a map.
+                                Making use of several filters and other functions to provide more specific search results for the user.
+                            </p>
+                            <ul className="project__keywords-list">
+                                <li className="project_keyword">JavaScript</li>
+                                <li className="project_keyword">jQuery</li>
+                            </ul>
+                            <a href="https://github.com/pimdbg/quaketrack" target="_blank" className="project__link btn">Go to source code</a>
+                        </section>
+                    </Observer>
                 </section>
             </main>
             <Footer />
