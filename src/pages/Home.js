@@ -22,10 +22,12 @@ export default function Home() {
             <main>
 
                 <Observer>
-                    <section className="intro layout" style={{textAlign: "center"}}>
-                        <h2 className="intro__title">Frontend, Backend, SEO</h2>
-                        <p>
-                            Web Developer in Limburg, The Netherlands.
+                    <section id="about" className="intro layout">
+                        <h2 className="intro__title">About me</h2>
+                        <p className="intro__text text-block">
+                            I am a Web Developer, familiar with both Frontend and Backend.
+                            I take a lot of joy in developing websites and web-applications. Creating customized solutions, building from scratch or providing Search Engine Optimalization.
+                            Mostly I work with JavaScript, Php and of course other frequently used web-based languages.
                         </p>
                     </section>
                 </Observer>
