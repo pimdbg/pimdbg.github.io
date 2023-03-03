@@ -20,7 +20,7 @@ export default function Home() {
                     <Socials />
                 </div>
             </header>
-            <main style={{ paddingBottom: 50 }}>
+            <main className="main">
 
                 <Observer>
                     <section id="about" className="intro layout">
