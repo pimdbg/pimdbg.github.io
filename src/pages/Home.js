@@ -74,9 +74,9 @@ export default function Home() {
                 title: "Membership Admin Panel", 
                 description: "This application creates an admin panel to easily control memberships of an sports association. Initally Created as an end project for a school assignment. Built with the PHP Laravel framework",
                 keywords: ["PHP", "Laravel", "AlpineJS"],
-                // links: [
-                //     { label: "Go to source code", href: "https://github.com/pimdbg/quaketrack" }
-                // ]
+                links: [
+                    { label: "Go to source code", href: "https://github.com/pimdbg/Membership-Admin-Panel" }
+                ]
             }
         ];
 
@@ -85,37 +85,39 @@ export default function Home() {
                     <Observer>
                         <h3 className="projects__title">My Projects</h3>
                     </Observer>
-                    <Observer>
-                        {
-                            projects.map(project => (
-                                <section className="project">
-                                    <h4>{project.title}</h4>
+                    <section className="projects__grid">
+                            {
+                                projects.map(project => (
+                                    <Observer>
+                                        <section className="project">
+                                            <h4>{project.title}</h4>
 
-                                    <p className="project__description text-block">
-                                        {project.description}
-                                    </p>
-                                    
-                                    {
-                                        project.keywords && (
-                                            <ul className="project__keywords-list">
-                                                {
-                                                    project.keywords.map(keyword => (
-                                                        <li className="project_keyword">{keyword}</li>
-                                                    ))
-                                                }
-                                            </ul>
-                                        )
-                                    }
+                                            <p className="project__description text-block">
+                                                {project.description}
+                                            </p>
+                                            
+                                            {
+                                                project.keywords && (
+                                                    <ul className="project__keywords-list">
+                                                        {
+                                                            project.keywords.map(keyword => (
+                                                                <li className="project_keyword">{keyword}</li>
+                                                            ))
+                                                        }
+                                                    </ul>
+                                                )
+                                            }
 
-                                    {
-                                        project.links && project.links.map(link => (
-                                            <a href={link.href} target="_blank" className="project__link btn">{link.label}</a>
-                                        ))
-                                    }
-                                </section>
-                            ))
-                        }
-                    </Observer>
+                                            {
+                                                project.links && project.links.map(link => (
+                                                    <a href={link.href} target="_blank" className="project__link btn">{link.label}</a>
+                                                ))
+                                            }
+                                        </section>
+                                    </Observer>
+                                ))
+                            }
+                    </section>
                 </section>
         )
     }
