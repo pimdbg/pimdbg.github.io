@@ -89,6 +89,10 @@ html {
 .projects__title {
   text-align: center;
 }
+.projects__grid {
+  display: grid;
+  gap: var(--gap)
+}
 
 .nav-bar {
   position: sticky;
