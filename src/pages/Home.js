@@ -53,28 +53,70 @@ export default function Home() {
 
                 </section>
                 
+                <Projects />
+
+            </main>
+            <Footer />
+        </div>
+    );
+
+    function Projects() {
+        let projects = [
+            { 
+                title: "Earthquake Map", 
+                description: "Built as a school assignment 2021, this webapplication provides data about recorded earthquakes. This application collects all data via an API, then visualises it on a map. Making use of several filters and other functions to provide more specific search results for the user.",
+                keywords: ["JavaScript", "jQuery"],
+                links: [
+                    { label: "Go to source code", href: "https://github.com/pimdbg/quaketrack" }
+                ]
+            },
+            {
+                title: "Membership Admin Panel", 
+                description: "This application creates an admin panel to easily control memberships of an sports association. Initally Created as an end project for a school assignment. Built with the PHP Laravel framework",
+                keywords: ["PHP", "Laravel", "AlpineJS"],
+                // links: [
+                //     { label: "Go to source code", href: "https://github.com/pimdbg/quaketrack" }
+                // ]
+            }
+        ];
+
+        return (
                 <section id="projects" className="projects layout">
                     <Observer>
                         <h3 className="projects__title">My Projects</h3>
                     </Observer>
                     <Observer>
-                        <section className="project">
-                            <h4>Earthquake Map</h4>
-                            <p className="project__description text-block">
-                                Built as a school assignment 2021, this webapplication provides data about recorded earthquakes.
-                                This application collects all data via an API, then visualises it on a map.
-                                Making use of several filters and other functions to provide more specific search results for the user.
-                            </p>
-                            <ul className="project__keywords-list">
-                                <li className="project_keyword">JavaScript</li>
-                                <li className="project_keyword">jQuery</li>
-                            </ul>
-                            <a href="https://github.com/pimdbg/quaketrack" target="_blank" className="project__link btn">Go to source code</a>
-                        </section>
+                        {
+                            projects.map(project => (
+                                <section className="project">
+                                    <h4>{project.title}</h4>
+
+                                    <p className="project__description text-block">
+                                        {project.description}
+                                    </p>
+                                    
+                                    {
+                                        project.keywords && (
+                                            <ul className="project__keywords-list">
+                                                {
+                                                    project.keywords.map(keyword => (
+                                                        <li className="project_keyword">{keyword}</li>
+                                                    ))
+                                                }
+                                            </ul>
+                                        )
+                                    }
+
+                                    {
+                                        project.links && project.links.map(link => (
+                                            <a href={link.href} target="_blank" className="project__link btn">{link.label}</a>
+                                        ))
+                                    }
+                                </section>
+                            ))
+                        }
                     </Observer>
                 </section>
-            </main>
-            <Footer />
-        </div>
-    );
+        )
+    }
 }
