@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { SlMenu, SlHome } from 'react-icons/sl';
+import { RxCross2 } from 'react-icons/rx';
 import Socials from './Socials';
 
 function Nav() {
@@ -37,7 +38,24 @@ function Nav() {
                 
                 {/* Menu button */}
                 <button className="nav-mobile__btn" onClick={() => setIsOpened(! isOpened)}>
-                    <SlMenu color={"white"} size={25} />
+                    <SlMenu color={"white"} size={25} 
+                        style={{ 
+                            translate: isOpened ? '100vw' : 0, 
+                            blur: isOpened ? '4px' : 0, 
+                            transition: "all 250ms",
+                            position: "absolute",
+                            top: 0
+                        }}
+                    />
+                    <RxCross2 color={"white"} size={25} 
+                        style={{ 
+                            translate: ! isOpened ? '100vw' : 0, 
+                            blur: ! isOpened ? '4px' : 0, 
+                            transition: "all 250ms",
+                            position: "absolute",
+                            top: 0
+                        }}
+                    />
                 </button>
                 
                 <nav className={"nav-mobile " + ((isOpened) ? "nav-mobile--opened" : "")} 
