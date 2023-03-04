@@ -59,10 +59,8 @@ function Nav() {
                 </button>
                 
                 <nav className={"nav-mobile " + ((isOpened) ? "nav-mobile--opened" : "")} 
-                    style={{ 
-                        translate: (isOpened) ? 0 : "100vmax",
-                        transition: `translate ${transitionDuration}ms ease-out` 
-                    }}>
+                    style={{ transition: `translate ${transitionDuration}ms ease-out` }}>
+
                     <ul className="nav-mobile__menu nav-menu layout">
                         {
                             links.map((link, index) => (
