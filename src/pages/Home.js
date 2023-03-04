@@ -12,7 +12,7 @@ export default function Home() {
             <header className="welcome layout">
                 <div className="welcome__content">
                     <h1 className="welcome__title highlight">Hello there</h1>
-                    <h3 className="welcome__subtitle">Welcome</h3>
+                    <h2 className="welcome__subtitle">Welcome</h2>
                     <p className="welcome__description">
                         My name is Pim Dautzenberg, <br />
                         I am a Full Stack Web Developer in Limburg, The Netherlands.
@@ -26,9 +26,9 @@ export default function Home() {
                     <section id="about" className="intro layout">
                         <h2 className="intro__title">About me</h2>
                         <p className="intro__text text-block">
-                            I am a Web Developer, familiar with both Frontend and Backend.
+                            I am a <strong>Web Developer</strong>, familiar with both Frontend and Backend.
                             I take a lot of joy in developing websites and web-applications. Creating customized solutions, building from scratch or providing Search Engine Optimalization.
-                            Mostly I work with JavaScript, Php and of course other frequently used web-based languages.
+                            Mostly I work with <strong>JavaScript</strong>, <strong>Php</strong> and of course other frequently used web-based languages.
                         </p>
                     </section>
                 </Observer>
@@ -87,8 +87,8 @@ export default function Home() {
                     </Observer>
                     <section className="projects__grid">
                             {
-                                projects.map(project => (
-                                    <Observer>
+                                projects.map((project, index) => (
+                                    <Observer key={index}>
                                         <section className="project">
                                             <h4>{project.title}</h4>
 
@@ -100,8 +100,8 @@ export default function Home() {
                                                 project.keywords && (
                                                     <ul className="project__keywords-list">
                                                         {
-                                                            project.keywords.map(keyword => (
-                                                                <li className="project_keyword">{keyword}</li>
+                                                            project.keywords.map((keyword, index) => (
+                                                                <li key={index} className="project_keyword">{keyword}</li>
                                                             ))
                                                         }
                                                     </ul>
@@ -109,8 +109,8 @@ export default function Home() {
                                             }
 
                                             {
-                                                project.links && project.links.map(link => (
-                                                    <a href={link.href} target="_blank" className="project__link btn">{link.label}</a>
+                                                project.links && project.links.map((link, index) => (
+                                                    <a key={index} href={link.href} target="_blank" className="project__link btn">{link.label}</a>
                                                 ))
                                             }
                                         </section>
