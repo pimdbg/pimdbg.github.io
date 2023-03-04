@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { SlMenu, SlHome } from 'react-icons/sl';
 import { RxCross2 } from 'react-icons/rx';
 import Socials from './Socials';
@@ -32,6 +32,11 @@ function Nav() {
     function NavMobile() {
         const [isOpened, setIsOpened] = useState(false);
         let transitionDuration = 300;
+
+        // Handle scroll permission
+        useEffect(() => {
+            document.querySelector('html').style.overflow = (isOpened) ? 'hidden' : 'scroll' 
+        }, [isOpened]);
 
         return (
             <div className="nav-mobile-wrapper layout">
