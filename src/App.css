@@ -49,7 +49,7 @@ html {
 }
 
 .welcome {
-  min-height: calc(100vh - var(--nav-bar-height));
+  min-height: calc(80vh - var(--nav-bar-height));
 }
 
 .welcome__content {
